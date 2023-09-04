@@ -68,7 +68,7 @@ match problem:
             dec = 0
 
             if type == 10:
-                digits = int(binary)
+                digits = int(bin)
                 pos = 0
                 while digits > 0:
                     rem = digits % 10
@@ -77,6 +77,7 @@ match problem:
                     pos += 1
 
                 return dec
+
 
         def decToOctal(dec):
             if dec == 0:
@@ -91,7 +92,8 @@ match problem:
                 dec //= 8
             return octal
 
-        def defToHex(dec):
+
+        def decToHex(dec):
             hexCharacters = "0123456789ABCDEF"
             hexRes = ""
 
@@ -106,7 +108,15 @@ match problem:
             return hexRes
 
         def main():
-            print("Binary to Decimal: ")
+            dec = int(input("Input a decimal number: "))
+            bin = int(input("Input a binary number: "))
+            type = int(input("Input type (2, 8, 10, 16): "))
+            print("Binary: ", decToBinary(dec))
+            print("Binary to N: ", binaryToN(bin, type))
+            print("Octal: ", decToOctal(dec))
+            print("Hexadecimal: ", decToOctal(dec))
+
+        main()
 
 
 
