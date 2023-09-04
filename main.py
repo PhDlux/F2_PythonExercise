@@ -8,7 +8,7 @@ match problem:
             fahrenheit = temperature * (9/5) + 32
             return f"{fahrenheit:.2f}"
 
-        print("Fahrenheit: ", celsiusToFahrenheit())
+        print("Fahrenheit: ", celsiustofahrenheit())
     case 2:
         # 2
         num1 = int(input("Enter first number: "))
